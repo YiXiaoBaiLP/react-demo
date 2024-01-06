@@ -3,6 +3,20 @@
  * @returns
  */
 function App() {
+  const handleClick = () => {
+    const num = 1;
+    console.log(num);
+  };
+
+  const handleClick2 = (e) => {
+    console.log(e);
+  };
+
+  const handleClick3 = (name, e) => {
+    alert(name);
+    console.log(name, e);
+  };
+
   const message = "这是一个消息";
   // const a = () => {
   //   return "测试函数";
@@ -37,6 +51,16 @@ function App() {
         */}
         <div style={{ color: "red" }}>this is div</div>
       </p>
+      <p>=============================</p>
+      <button onClick={handleClick}>click me </button>
+      <p>=============================</p>
+      <p>=============================</p>
+      <button onClick={handleClick2}>click me 2</button>
+      <p>=============================</p>
+      <p>=============================</p>
+      {/* 传递两个参数  */}
+      <button onClick={(e) => handleClick3("jack", e)}>click me 3</button>
+      <p>=============================</p>
     </div>
   );
 }
