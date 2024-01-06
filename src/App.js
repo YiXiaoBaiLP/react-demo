@@ -61,8 +61,28 @@ function App() {
       {/* 传递两个参数  */}
       <button onClick={(e) => handleClick3("jack", e)}>click me 3</button>
       <p>=============================</p>
+      <p>===== 使用自定义组件 ===============</p>
+      <Button />
+      <Button></Button>
+      <br></br>
+      <Button2></Button2>
+      <p>===== 使用自定义组件 ===============</p>
     </div>
   );
 }
+
+/**
+ * 普通方式创建自定义组件
+ * @returns
+ */
+function Button() {
+  return <button>click mi！</button>;
+}
+
+/**
+ * 使用箭头函数的方式，使用自定义组件
+ * @returns
+ */
+const Button2 = () => <button>click mw 222asldkfalsdkf老师肯定就发！</button>;
 
 export default App;
