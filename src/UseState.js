@@ -9,9 +9,19 @@ function UseState() {
   // 2.点击事件回调
   const handleClick = () => setCount(count + 1);
 
+  // 修改 对象中的属性
+  const [form, setForm] = useState({ name: "jack" });
+  const handleForm = () => {
+    return setForm({
+      ...form,
+      name: "修改后的对象",
+    });
+  };
   return (
     <div className="UseState">
       <button onClick={handleClick}>{count}</button>
+      <h2>====== 修改对象中的名称 =========</h2>
+      <button onClick={handleForm}> 修改对象中的名称：{form.name}</button>
     </div>
   );
 }
