@@ -9,22 +9,10 @@ import ReactDOM from "react-dom/client";
 
 // 导入 项目的根组件
 import App from "./App";
-import List from "./List";
-import If from "./If";
-import UseState from "./UseState";
-
 // 把 App 根组件渲染到id 为 root 的dom节点上
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    <List />
-    <p>==========================================================</p>
-    <If />
-    <p>
-      ======================= 使用 useState 状态函数
-      ===================================
-    </p>
-    <UseState />
   </React.StrictMode>
 );
