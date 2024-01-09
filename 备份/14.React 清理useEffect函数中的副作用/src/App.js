@@ -8,7 +8,7 @@ function Son() {
     }, 10);
     return () => {
       // 清理副作用（组件卸载时）
-      // 关闭当前定时器
+      // 关闭定时器
       clearInterval(timer);
     };
   }, []);
